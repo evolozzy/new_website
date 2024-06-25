@@ -20,6 +20,10 @@ jobs:
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
     
   deploy:
-    - name: Jekyll Deploy Action
-    - uses: jeffreytse/jekyll-deploy-action@v0.6.0
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: jeffreytse/jekyll-deploy-action@v0.6.0
+      - name: Jekyll Deploy Action
+    
             
