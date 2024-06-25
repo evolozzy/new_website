@@ -7,16 +7,16 @@ title: Ozan Kiratli, PhD | Bioinformatician
 description: Personal website powered by Jekyll
 # baseurl: The subpath of your site
 # > set this to "", if you renamed the repository to <user>.github.io
-baseurl: "/ozankiratli.github.io"
+baseurl: ""
 
 # LANDING PAGE
 # username: This will displayed on the landing page as your name.
-username: Ozan Kiratli
+username: Ozan Kiratli, PhD
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Jekyll Theme
+typing_text: Bioinformatician
 # email: Your E-Mail address for the email button.
-email: email@example.com
+email: ozankiratli@protonmail.com
 # For every social button you want to display, set your username or userid
 # If you do not use one of the following websites, then leave it empty
 # > twitter_username:
@@ -34,7 +34,7 @@ show_aboutme_card: true
 # about_me_title: The will be displayed as the title in the About Me section
 about_me_title: About Me
 # about_me_description: This will be displayed under the title.
-about_me_description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. If you like this theme and want to use it for yourself, checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/longpdo/neumorphism" target="_blank" rel="noreferrer"> Github </a>. You can also find me on <a class="highlight-link" href="https://jamstackthemes.dev/theme/jekyll-neumorphism/" target="_blank" rel="noreferrer">JAMstack Themes</a> and on <a class="highlight-link" href="https://jekyll-themes.com/neumorphism/" target="_blank" rel="noreferrer">Jekyll Themes</a>.
+about_me_description: I am an adaptive, goal-driven, and meticulous bioinformatician. I am passionate about investigating intellectually challenging questions that bridge evolutionary processes with real-world applications. I employ my scientific understanding, statistical reasoning, and computational skills to implement cutting-edge machine-learning methods for biological problems. In my daily work, I utilize this approach to uncover the evolutionary dynamics of viral diseases.
 
 # SKILLS SECTION
 # show_skills_card:
@@ -63,7 +63,7 @@ show_projects_card: true
 # show_projects:
 # > setting this to true, will display your listed projects in _data/projects.yml
 # > setting this to false, will omit your listed projects
-show_projects: true
+show_projects: false
 # projects_title: The will be displayed as the title of your projects
 projects_title: Projects
 # show_os_projects:
@@ -81,12 +81,12 @@ show_contact_card: true
 # contact_title: The will be displayed as the title in the Contact section
 contact_title: Contact
 # contact_description: This will be displayed under the title.
-contact_description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. If you like this theme and want to use it for yourself, checkout the source code and the documentation at <a class="highlight-link" href="https://github.com/longpdo/neumorphism" target="_blank" rel="noreferrer"> Github </a>.
+contact_description: Feel free to contact me.
 
 # GITHUB-METADATA
 # Set this to your forked repository
 # > e.g. <user>/<user>.github.io
-repository: longpdo/neumorphism
+repository: ozankiratli/ozankiratli.github.io
 projects:
   # sortby:
   # > set this to pushed, if you want to sort your github repositories by time.
@@ -103,14 +103,18 @@ projects:
     forks: true
     # projects: A list of the repository names you want to exclude from the listing.
     projects:
-    # - repo1-to-be-excluded
-    # - repo2-to-be-excluded
+     - Template-Project
+     - PiHole-BlockLists
+     - NordVPNonOVPN
+     - tuxisalive
+     - Resume_CSS
+
 
 # GOOGLE-ANALYTICS
 # Set the id, if you want to track your website with Google Analytics
 # > set this to "", if you do not want to track with Google Analytics
 google-analytics:
-  id: "UA-158757509-2"
+  id: ""
 
 ### END OF VALUES YOU SHOULD CHANGE ###
 

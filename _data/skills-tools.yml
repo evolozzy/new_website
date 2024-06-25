@@ -5,32 +5,94 @@
 # - name: Git
 #   weight: 5
 
+
 - name: Git
+  weight: 4
+
+- name: RStudio
   weight: 5
 
-- name: Bash
-  weight: 3
-
-- name: Scrum
-  weight: 3
-
-- name: Travis CI
-  weight: 1
-
-- name: Jenkins
-  weight: 1
-
-- name: Chrome DevTools
-  weight: 2
-
-- name: npm
-  weight: 2
-
-- name: gulp
+- name: Vim
   weight: 4
 
-- name: VS Code
+- name: LaTeX
+  weight: 4
+
+- name: Quarto
+  weight: 2
+
+- name: ggplot
+  weight: 4
+
+- name: Plotly
+  weight: 1
+
+- name: Geneious
   weight: 3
 
-- name: Postman
+- name: MEGA
+  weight: 2
+
+- name: IGV
   weight: 4
+
+- name: BWA
+  weight: 1
+
+- name: Bowtie2
+  weight: 1 
+  
+- name: FreeBayes
+  weight: 1 
+  
+- name: FastQC
+  weight: 1 
+  
+- name: Trimmomatic
+  weight: 1 
+  
+- name: Cutadapt
+  weight: 1 
+  
+- name: Trim Galore
+  weight: 1 
+  
+- name: Samtools
+  weight: 1 
+  
+- name: Bcftools
+  weight: 1 
+  
+- name: Seqtk
+  weight: 1
+
+- name: IQ-TREE
+  weight: 2
+
+- name: VCFtools
+  weight: 1 
+  
+- name: BEDtools
+  weight: 1 
+  
+- name: MAFFT
+  weight: 1 
+  
+- name: PLINK
+  weight: 1 
+
+- name: BLAST
+  weight: 3 
+  
+- name: BEAST
+  weight: 2
+
+- name: Keras
+  weight: 3
+
+- name: TensorFlow
+  weight: 3
+
+- name: Random Forest
+  weight: 2
+

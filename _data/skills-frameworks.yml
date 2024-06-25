@@ -1,33 +1,28 @@
 # > name: Name of your framework
 # > weight: Describes how good you know the framework - values from 1 up to 5
-#
+#   Conda, Docker, Python venv, SLURM
 # Example of a framework
 # - name: Framework
 #   weight: 5
 
-- name: Angular
-  weight: 5
-
-- name: AngularJS
+- name: Linux/UNIX Shell
   weight: 3
 
-- name: React
-  weight: 4
-
-- name: Node
-  weight: 1
-
-- name: Flutter
-  weight: 2
-
-- name: Express
+- name: Conda
   weight: 3
 
-- name: Django
-  weight: 1
-
-- name: Spring
+- name: Docker
   weight: 2
 
-- name: Rails
-  weight: 4
+- name: Python venv
+  weight: 1
+
+- name: SLURM
+  weight: 1
+
+- name: High-performance Computing
+  weight: 2
+
+- name: Cloud computing
+  weight: 2
+
