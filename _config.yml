@@ -103,6 +103,9 @@ projects:
     forks: true
     # projects: A list of the repository names you want to exclude from the listing.
     projects:
+     - ozankiratli.github.io
+     - dotfiles
+     - swayconfig
      - Template-Project
      - PiHole-BlockLists
      - NordVPNonOVPN

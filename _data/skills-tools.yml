@@ -21,7 +21,7 @@
 - name: Quarto
   weight: 2
 
-- name: ggplot
+- name: ggplot2
   weight: 4
 
 - name: Plotly

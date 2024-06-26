@@ -18,7 +18,7 @@
   weight: 4
 
 - name: MySQL
-  weight: 3
+  weight: 2
 
 - name: AWK
   weight: 3
