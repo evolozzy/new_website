@@ -20,8 +20,8 @@
 
 - title: Bioinformatician - Postdoctoral Fellow
   title-url: https://wrair.health.mil/
-  date: Oct 2022-Present
-  subtitle: Walter Reed Army Institute of Research, Silver Spring, MD
+  date: 2022-Present
+  subtitle: <p>Walter Reed Army Institute of Research</p><p>Silver Spring, MD</p>
   tags:
     - tag: Machine Learning
     - tag: Viral Disease Research
@@ -30,8 +30,8 @@
 
 - title: Research and Teaching Assistant
   title-url: https://bio.upenn.edu
-  date: Aug 2016-Aug 2022
-  subtitle: University of Pennsylvania, Philadelphia, PA
+  date: 2016-2022
+  subtitle: <p>University of Pennsylvania</p><p>Philadelphia, PA</p>
   tags:
     - tag: Teaching (Evolution, Ecology, Intro Bio)
     - tag: Bioinformatics
@@ -41,8 +41,8 @@
 
 - title: PhD in Biology
   title-url: https://bio.upenn.edu/
-  date: 2015-2022
-  subtitle: University of Pennsylvania, Philadelphia, PA
+  date: 2022
+  subtitle: <p>University of Pennsylvania</p><p>Philadelphia, PA</p>
   tags:
     - tag: Experimental Evolution
     - tag: Pipeline Development
@@ -50,8 +50,8 @@
 
 - title: Research and Teaching Assistant
   title-url: https://bio.metu.edu.tr
-  date: Feb 2014-Jul 2015
-  subtitle: Middle East Technical University, Ankara, Turkey
+  date: 2014-2015
+  subtitle: <p>Middle East Technical University</p><p>Ankara, Turkey</p>
   tags:
     - tag: Teaching (Genetics and Statistics)
     - tag: Research
@@ -59,8 +59,8 @@
 
 - title: MS n Biology
   title-url: https://bio.metu.edu.tr
-  date: 2013-2016
-  subtitle: Middle East Technical University, Ankara, Turkey
+  date: 2016
+  subtitle: <p>Middle East Technical University</p><p>Ankara, Turkey</p>
   tags:
     - tag: Evolution
     - tag: Python
@@ -69,8 +69,8 @@
 
 - title: BS in Biology
   title-url: https://bio.metu.edu.tr
-  date: 2007-2013
-  subtitle: Middle East Technical University, Ankara, Turkey
+  date: 2013
+  subtitle: <p>Middle East Technical University</p><p>Ankara, Turkey</p>
   tags:
     - tag: Minor in Physics 
   timeline-side: left

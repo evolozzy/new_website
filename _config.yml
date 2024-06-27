@@ -14,7 +14,7 @@ baseurl: ""
 username: Ozan Kiratli, PhD
 # typing_text: This will be typed before 'scroll down for more'.
 # > set this to your job title, e.g. Fullstack Developer
-typing_text: Bioinformatician
+typing_text: I'm a Bioinformatician!
 # email: Your E-Mail address for the email button.
 email: ozankiratli@protonmail.com
 # For every social button you want to display, set your username or userid
@@ -71,7 +71,7 @@ projects_title: Projects
 # > setting this to false, will omit your public projects on github
 show_os_projects: true
 # os_projects_title: The will be displayed as the title of your open source projects
-os_projects_title: Open Source Projects
+os_projects_title: Github Projects
 
 # CONTACT SECTION
 # show_contact_card:
@@ -91,7 +91,7 @@ projects:
   # sortby:
   # > set this to pushed, if you want to sort your github repositories by time.
   # > set this to stars, if you want to sort your github repositories by stars.
-  sort_by: pushed
+  sort_by: stars
   exclude:
     # archived:
     # > setting this to true, will exclude archived repositories
