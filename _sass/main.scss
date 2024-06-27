@@ -23,10 +23,12 @@ $card-bg-color: linear-gradient(
   rgba(43, 45, 47, 1) 80%
 );
 $primary-color: #3cb371;
-$skill-color-language: #14bbf7;
+$link-color: #60c0ff;
+$skill-color-language: #60bfff;
 $skill-color-framework: #00ecd8;
 $skill-color-tool: #2cffa7;
-$shade-color: #002d39;
+$shade-color: #121c24;
+$hexagon-color: #00ecd8;
 
 /* General */
 
@@ -52,12 +54,21 @@ h1 {
   line-height: 2rem;
 }
 
+h2 {
+  color: $primary-color;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-strong;
+  text-shadow: 0.125rem 0.125rem 0.125rem $shade-color;
+
+  line-height: 2rem;
+}
+
 p {
   word-spacing: 0.1rem;
 }
 
 a {
-  color: $primary-color;
+  color: $link-color;
   text-decoration: none;
 
   &:hover {
@@ -66,20 +77,20 @@ a {
 }
 
 .highlight-title {
-  color: $primary-color;
+  color: $link-color;
   text-shadow: 0.125rem 0.125rem 0.125rem $shade-color;
 }
 
 .highlight-link {
-  box-shadow: inset 0 -0.125rem 0 $primary-color;
+  box-shadow: inset 0 -0.125rem 0 $link-color;
   box-sizing: border-box;
-  color: $primary-color;
+  color: $link-color;
   display: inline-block;
   padding: 0.125rem 0.125rem;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    box-shadow: inset 0 -2rem 0 0 $primary-color;
+    box-shadow: inset 0 -2rem 0 0 $link-color;
     color: $text-color;
   }
 }
@@ -109,7 +120,7 @@ a {
 }
 
 .layout .card .description {
-  text-align: justify;
+  text-align: left;
 }
 
 .neumorphism-button {
@@ -191,7 +202,7 @@ a {
   }
 
   .load :last-child {
-    background: $primary-color;
+    background: $link-color;
   }
 
   @keyframes spin {
@@ -216,14 +227,14 @@ a {
 .footer {
   background: $bg-color;
   color: $text-color;
-  margin: 0.5rem;
+  margin: 0.1rem;
   padding: 0.1rem;
   font-size: xx-small;
   text-align: center;
 }
 
 .footer a {
-  color: $primary-color;
+  color: $link-color;
 
   &:hover,
   &:focus {
@@ -316,7 +327,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: #d44638;
+      fill: $link-color;
     }
   }
 
@@ -368,7 +379,7 @@ a {
 
   @keyframes colorEmail {
     to {
-      stroke: #b23121;
+      stroke: $link-color;
     }
   }
 
@@ -475,7 +486,7 @@ a {
   }
 
   .hexagon {
-    background: $primary-color;
+    background: $hexagon-color;
     height: 0.5rem;
     left: 0;
     margin-left: auto;
@@ -498,12 +509,12 @@ a {
   }
 
   .hexagon:before {
-    border-bottom: 0.25rem solid $primary-color;
+    border-bottom: 0.25rem solid $hexagon-color;
     top: -0.25rem;
   }
 
   .hexagon:after {
-    border-top: 0.25rem solid $primary-color;
+    border-top: 0.25rem solid $hexagon-color;
     bottom: -0.25rem;
   }
 
@@ -623,7 +634,7 @@ a {
     }
 
     .social-svg {
-      fill: $primary-color;
+      fill: $link-color;
     }
 
     &:hover {
@@ -734,23 +745,26 @@ a {
     }
 
     input[type="radio"]:checked + .filter-button {
-      color: $primary-color;
+      color: $link-color;
       font-weight: $font-weight-strong;
       @include neumorphism-button-pressed();
     }
 
     input[id="language"]:checked ~ div[skill-type="framework"],
     input[id="language"]:checked ~ div[skill-type="tool"] {
+      color: $skill-color-framework;
       @include filter-out;
     }
 
     input[id="framework"]:checked ~ div[skill-type="language"],
     input[id="framework"]:checked ~ div[skill-type="tool"] {
+      color: $skill-color-tool;
       @include filter-out;
     }
 
     input[id="tool"]:checked ~ div[skill-type="language"],
     input[id="tool"]:checked ~ div[skill-type="framework"] {
+      color: $skill-color-language;
       @include filter-out;
     }
   }
