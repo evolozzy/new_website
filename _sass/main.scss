@@ -180,7 +180,7 @@ a {
     $button-fill-dark 10%,
     $button-fill-light 80%
   );
-  box-shadow: 0.12px 0.12px 0.25px 0 $button-shadow-light,
+  box-shadow: 0.25px 0.25px 0.25px 0 $button-shadow-light,
     -0.12px -0.12px 0.25px $button-shadow-dark, 
     inset 0.5px 0.5px 0.25px 0 $button-shadow-dark,
     inset -0.12px -0.25px 0.25px $button-shadow-light;
@@ -271,7 +271,7 @@ a {
   color: $text-color;
   margin: 0.1rem;
   padding: 0.1rem;
-  font-size: x-small;
+  font-size: small;
   text-align: center;
 }
 
@@ -445,7 +445,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0rem 0rem;
+  padding: 0rem 2rem;
 
   div {
     padding: 0.5rem;
@@ -497,6 +497,11 @@ a {
   .filter-button {
     display: none;
   }
+
+  .filter-button[id="language"]{
+    color: $skill-color-language;
+  }
+
 }
 
 /* Timeline Section */
@@ -787,6 +792,24 @@ a {
         transition: 0.75s;
       }
     }
+    
+    input[id="language"]+ .filter-button {
+      &:hover{
+        color: $skill-color-language;
+      }
+    }
+
+    input[id="framework"]+ .filter-button {
+      &:hover{
+        color: $skill-color-framework;
+      }
+    }
+
+    input[id="tool"]+ .filter-button {
+      &:hover{
+        color: $skill-color-tool;
+      }
+    } 
 
     @mixin filter-out {
       height: 0;
@@ -797,27 +820,95 @@ a {
       transition: opacity 0s;
     }
 
-    input[type="radio"]:checked + .filter-button {
-      color: $button-pressed-text;
+    input[id="all"]:checked + .filter-button {
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+    
+    input[id="language"]:checked + .filter-button {
+      color: $skill-color-language;
       font-weight: $font-weight-strong;
       @include neumorphism-button-pressed();
     }
 
+    input[id="language"]:checked ~ input[id="framework"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-framework;
+      }
+    }
+
+    input[id="language"]:checked ~ input[id="tool"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-tool;
+      }
+    }
+
+    input[id="framework"]:checked + .filter-button {
+      color: $skill-color-framework;
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="framework"]:checked ~ input[id="language"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-language;
+      }
+    }
+
+    input[id="framework"]:checked ~ input[id="tool"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-tool;
+      }
+    }
+
+    input[id="tool"]:checked+ .filter-button {
+      color: $skill-color-tool;
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="tool"]:checked ~ input[id="language"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-language;
+      }
+    }
+
+    input[id="tool"]:checked ~ input[id="framework"] + .filter-button {
+      color: $text-color;
+      &:hover{
+        color:$skill-color-framework;
+      }
+    }
+
+    input[id="all"]:checked ~ input[id="language"] + .filter-button {
+      color: $skill-color-language;
+    }
+
+    input[id="all"]:checked ~ input[id="framework"] + .filter-button {
+      color: $skill-color-framework;
+    }
+
+    input[id="all"]:checked ~ input[id="tool"] + .filter-button {
+      color: $skill-color-tool;
+    }
+
     input[id="language"]:checked ~ div[skill-type="framework"],
     input[id="language"]:checked ~ div[skill-type="tool"] {
-      color: $skill-color-framework;
       @include filter-out;
     }
 
     input[id="framework"]:checked ~ div[skill-type="language"],
     input[id="framework"]:checked ~ div[skill-type="tool"] {
-      color: $skill-color-tool;
       @include filter-out;
     }
 
     input[id="tool"]:checked ~ div[skill-type="language"],
     input[id="tool"]:checked ~ div[skill-type="framework"] {
-      color: $skill-color-language;
       @include filter-out;
     }
   }
