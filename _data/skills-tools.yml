@@ -12,9 +12,6 @@
 - name: RStudio
   weight: 5
 
-- name: Vim
-  weight: 4
-
 - name: LaTeX
   weight: 4
 
