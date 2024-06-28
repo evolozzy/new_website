@@ -44,7 +44,9 @@
   date: 2022
   subtitle: <p>University of Pennsylvania</p><p>Philadelphia, PA</p>
   tags:
-    - tag: Experimental Evolution
+    - tag: Evolutionary Biology
+    - tag: Field Experiments
+    - tag: <i>Drosophila melanogaster</i>
     - tag: Pipeline Development
   timeline-side: left
 
@@ -57,12 +59,12 @@
     - tag: Research
   timeline-side: right
 
-- title: MS n Biology
+- title: MS in Biology
   title-url: https://bio.metu.edu.tr
   date: 2016
   subtitle: <p>Middle East Technical University</p><p>Ankara, Turkey</p>
   tags:
-    - tag: Evolution
+    - tag: Evolutionary Biology
     - tag: Python
     - tag: Modeling
   timeline-side: left

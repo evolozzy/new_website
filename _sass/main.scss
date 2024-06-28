@@ -15,20 +15,61 @@ $font-family-numbers: "Ubuntu Mono";
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 400;
-$text-color: #fff !default;
-$bg-color: rgba(43, 45, 47, 1);
+
+/* Palette */
+
+$leaf-green:  #3cb371;
+$terminal-green: #00ff66;
+$greenblue: #4fe0b7;
+$main-blue: #60c0ff;
+$dodger-blue: #1e90ff;
+$black: #000;
+$black-transparent: rgba(0,0,0,0.5);
+$darkgray: rgba(40,47,47,1);
+$darkgray-transparent: rgba(20, 20, 20, 0.4);
+$gray: rgba(105, 105, 105, 1);
+$gray-transparent:  rgba(105, 105, 105, 0.15);
+$lightgray: rgba(210, 210, 210, 1);
+$lightgray-transparent: rgba(210, 210, 210, 0.4);
+$white: #fff;
+
+
+$text-color: $white !default;
+$bg-color: $darkgray;
+
 $card-bg-color: linear-gradient(
   145deg,
-  rgba(115, 115, 115, 0.15) 15%,
-  rgba(43, 45, 47, 1) 80%
+  $gray-transparent 15%,
+  $darkgray 80%
 );
-$primary-color: #3cb371;
-$link-color: #60c0ff;
-$skill-color-language: #60bfff;
-$skill-color-framework: #00ecd8;
-$skill-color-tool: #2cffa7;
-$shade-color: #121c24;
-$hexagon-color: #00ecd8;
+
+
+$primary-color: $leaf-green;
+$accent-color: $main-blue;
+$link-color: $dodger-blue;
+$skill-color-language: $main-blue;
+$skill-color-framework: $terminal-green;
+$skill-color-tool: $greenblue;
+$shade-color: $black-transparent;
+$hexagon-color: $greenblue;
+$card-big-shadow-dark: $black;
+$card-big-shadow-light: $gray;
+$card-shadow-dark: $black;
+$card-shadow-light: $gray;
+$button-fill-dark: $darkgray-transparent;
+$button-fill-light: $gray-transparent;
+$button-shadow-dark: $black;
+$button-shadow-light: $lightgray-transparent;
+$button-pressed-text: $primary-color;
+$social-icon-fill: $white;
+$social-icon-circle: $white;
+$social-hover-fill: $black;
+$social-black-icon: $black;
+$timeline-line-light: $lightgray;
+$timeline-line-lighter: $lightgray-transparent;
+$timeline-arrows-color: $accent-color;
+
+
 
 /* General */
 
@@ -68,16 +109,16 @@ p {
 }
 
 a {
-  color: $link-color;
+  color: $accent-color;
   text-decoration: none;
 
   &:hover {
-    color: $primary-color;
+    color: $link-color;
   }
 }
 
 .highlight-title {
-  color: $link-color;
+  color: $accent-color;
   text-shadow: 0.125rem 0.125rem 0.125rem $shade-color;
 }
 
@@ -126,31 +167,32 @@ a {
 .neumorphism-button {
   background: linear-gradient(
     145deg,
-    rgba(100, 100, 105, 0.15) 15%,
-    rgba(33, 33, 33, 0.4) 80%
+    $button-fill-light 15%,
+    $button-fill-dark 80%
   );
-  box-shadow: -0.75px -0.5px 0.25px 0 rgba(250, 250, 250, 0.13),
-    0.75px 0.75px 0.25px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: -0.75px -0.5px 0.25px 0 $button-shadow-light,
+    0.75px 0.75px 0.25px 0 $button-shadow-dark;
 }
 
 @mixin neumorphism-button-pressed {
   background: linear-gradient(
     150deg,
-    rgba(20, 20, 20, 0.4) 10%,
-    rgba(115, 115, 115, 0.15) 80%
+    $button-fill-dark 10%,
+    $button-fill-light 80%
   );
-  box-shadow: 0.12px 0.12px 0.25px 0 rgba(210, 210, 210, 0.4),
-    -0.12px -0.12px 0.25px rgba(0, 0, 0, 0.4), inset 0.5px 0.5px 0.25px 0 rgba(0, 0, 0, 0.4),
-    inset -0.12px -0.25px 0.25px rgba(210, 210, 210, 0.4);
+  box-shadow: 0.12px 0.12px 0.25px 0 $button-shadow-light,
+    -0.12px -0.12px 0.25px $button-shadow-dark, 
+    inset 0.5px 0.5px 0.25px 0 $button-shadow-dark,
+    inset -0.12px -0.25px 0.25px $button-shadow-light;
 }
 
 .neumorphism-card {
-  box-shadow: inset 0.5px 0.5px 1px rgba(0, 0, 0, 1),
-    inset -0.5px -0.5px 1px rgba(99, 99, 99, 1);
+  box-shadow: inset 0.5px 0.5px 1px $card-shadow-dark,
+    inset -0.5px -0.5px 1px $card-shadow-light;
 }
 
 .neumorphism-card-big {
-  box-shadow: 1px 1px 0.75px #161718, -1px -1px 0.75px #404346;
+  box-shadow: 1px 1px 0.75px $card-big-shadow-dark, -1px -1px 0.75px $card-big-shadow-light;
 }
 
 /* Preloader */
@@ -202,7 +244,7 @@ a {
   }
 
   .load :last-child {
-    background: $link-color;
+    background: $accent-color;
   }
 
   @keyframes spin {
@@ -229,7 +271,7 @@ a {
   color: $text-color;
   margin: 0.1rem;
   padding: 0.1rem;
-  font-size: xx-small;
+  font-size: x-small;
   text-align: center;
 }
 
@@ -292,7 +334,7 @@ a {
     }
 
     .social-svg {
-      fill: white;
+      fill: $social-icon-fill;
     }
 
     .label {
@@ -305,12 +347,12 @@ a {
       .circle {
         animation: outWaveIn 1s cubic-bezier(0.42, 0, 0.58, 1) forwards,
           colorBlackIcon 1s linear forwards;
-        fill: $text-color;
+        fill: $social-icon-circle;
         fill-opacity: 1;
       }
 
       .social-svg {
-        fill: #000;
+        fill: $social-hover-fill;
       }
 
       .label {
@@ -327,7 +369,7 @@ a {
         colorEmail 1s linear forwards;
     }
     .social-svg {
-      fill: $link-color;
+      fill: $accent-color;
     }
   }
 
@@ -373,13 +415,13 @@ a {
 
   @keyframes colorBlackIcon {
     to {
-      stroke: #000;
+      stroke: $social-black-icon;
     }
   }
 
   @keyframes colorEmail {
     to {
-      stroke: $link-color;
+      stroke: $accent-color;
     }
   }
 
@@ -403,19 +445,13 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0rem 0rem;
 
   div {
-    padding: 0.6rem;
+    padding: 0.5rem;
     opacity: 1;
-    transition: opacity 0s ease-out;
+    transition: opacity 2s ease-out;
   }
-
-  div.unloading{
-    padding: 0.5rem;    
-    opacity: 0;
-    transition: opacity 1s ease-in;
-  }
-
 
   div[skill-type="language"] {
     color: $skill-color-language;
@@ -477,10 +513,10 @@ a {
   .timeline:before {
     background: linear-gradient(
       to bottom,
-      #f3f3f3 0%,
-      #d5d5d5 8%,
-      #d5d5d5 92%,
-      #f3f3f3 100%
+      $timeline-line-lighter 0%,
+      $timeline-line-light 4%,
+      $timeline-line-light 92%,
+      $timeline-line-lighter 100%
     );
     content: " ";
     height: 100%;
@@ -499,6 +535,7 @@ a {
     background: $hexagon-color;
     height: 0.5rem;
     left: 0;
+    border-radius: 0.06rem;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.5rem;
@@ -521,12 +558,12 @@ a {
 
   .hexagon:before {
     border-bottom: 0.25rem solid $hexagon-color;
-    top: -0.25rem;
+    top: -0.23rem;
   }
 
   .hexagon:after {
     border-top: 0.25rem solid $hexagon-color;
-    bottom: -0.25rem;
+    bottom: -0.23rem;
   }
 
   .flag-wrapper {
@@ -548,7 +585,7 @@ a {
 
     span:after {
       content: "\226B";
-      color: $primary-color;
+      color: $timeline-arrows-color;
       position: absolute;
       opacity: 0;
       right: -1rem;
@@ -584,8 +621,8 @@ a {
   .desc {
     background: $bg-color;
     border-radius: 0.25rem;
-    margin: 0.5em 0 0 0;
-    padding: 0.5em;
+    margin: 0.025em 0 0 0.1rem;
+    padding: 0.025rem 0.5rem 1rem 0.5rem;
     text-align: center;
   }
 }
@@ -647,7 +684,7 @@ a {
     }
 
     .social-svg {
-      fill: $link-color;
+      fill: $accent-color;
     }
 
     &:hover {
@@ -655,14 +692,14 @@ a {
       animation: jump 1s infinite alternate;
 
       .social-svg {
-        fill: $text-color;
+        fill: $social-icon-fill;
       }
     }
   }
 
   .black:hover {
     .social-svg {
-      fill: #000;
+      fill: $social-black-icon;
     }
   }
 
@@ -711,28 +748,28 @@ a {
 
   #skills {
     div[skill-weight="1"] {
-      font-size: 1rem;
+      font-size: 0.75rem;
       line-height: 0rem;
     }
 
     div[skill-weight="2"] {
-      font-size: 2rem;
-      line-height: 1rem;
+      font-size: 1.5rem;
+      line-height: 0.5rem;
     }
 
     div[skill-weight="3"] {
-      font-size: 3rem;
-      line-height: 2rem;
+      font-size: 2.25rem;
+      line-height: 1.25rem;
     }
 
     div[skill-weight="4"] {
-      font-size: 5rem;
-      line-height: 4rem;
+      font-size: 3.75rem;
+      line-height: 2.75rem;
     }
 
     div[skill-weight="5"] {
-      font-size: 8rem;
-      line-height: 6rem;
+      font-size: 6rem;
+      line-height: 5rem;
     }
 
     .filter-button {
@@ -740,7 +777,7 @@ a {
       cursor: pointer;
       display: unset;
       margin: 0 0.25rem 1rem;
-      padding: 0.25rem 0.25rem;
+      padding: 0.25rem 0.5rem;
       text-align: center;
       width: 21%;
       transition: 0.75s;
@@ -757,10 +794,11 @@ a {
       opacity: 0;
       padding: 0;
       width: 0;
+      transition: opacity 0s;
     }
 
     input[type="radio"]:checked + .filter-button {
-      color: $link-color;
+      color: $button-pressed-text;
       font-weight: $font-weight-strong;
       @include neumorphism-button-pressed();
     }
