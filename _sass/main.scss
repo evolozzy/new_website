@@ -170,8 +170,8 @@ a {
     $button-fill-light 15%,
     $button-fill-dark 80%
   );
-  box-shadow: -0.75px -0.5px 0.25px 0 $button-shadow-light,
-    0.75px 0.75px 0.25px 0 $button-shadow-dark;
+  box-shadow: -1px -1px 1px 0 $button-shadow-light,
+    1px 1px 1px 0 $button-shadow-dark;
 }
 
 @mixin neumorphism-button-pressed {
@@ -180,10 +180,10 @@ a {
     $button-fill-dark 10%,
     $button-fill-light 80%
   );
-  box-shadow: 0.25px 0.25px 0.25px 0 $button-shadow-light,
-    -0.12px -0.12px 0.25px $button-shadow-dark, 
-    inset 0.5px 0.5px 0.25px 0 $button-shadow-dark,
-    inset -0.12px -0.25px 0.25px $button-shadow-light;
+  box-shadow: 1px 1px 0.75px 0 $button-shadow-light,
+    -1px -1px 0.75px $button-shadow-dark, 
+    inset 0.5px 0.5px 0.5px 0 $button-shadow-dark,
+    inset -0.5px -0.5px 0.5px $button-shadow-light;
 }
 
 .neumorphism-card {
@@ -1051,5 +1051,78 @@ a {
   }
   100% {
     bottom: 0;
+  }
+}
+
+/* General */
+
+.scroll-down {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mouse {
+  width: 1.25rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  margin-bottom: .5rem;
+  display: flex;
+  
+}
+
+.mouse span {
+  width: .625rem;
+  height: .625rem;
+  background-color: white;
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  animation: move-wheel 1.25s linear infinite;
+}
+
+.arrow span {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid transparent;
+  border-right-color: white;
+  border-bottom-color: white;
+  transform: rotate(45deg);
+  animation: arrow-down .625s alternate infinite;
+}
+
+
+@keyframes move-wheel {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes arrow-down {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: .25;
+  }
+  50% {
+    opacity: .5;
+  }
+  75% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
   }
 }
