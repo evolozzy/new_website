@@ -8,8 +8,9 @@
 /* Variables */
 
 $small-screen: 48em !default;
-$medium-screen: 62em !default;
+$medium-screen: 60em !default;
 $large-screen: 75em !default;
+$max-card-width: 49em !default;
 $font-family: "Source Sans 3", sans-serif;
 $font-family-numbers: "Ubuntu Mono";
 $font-size-base: 1rem !default;
@@ -105,7 +106,7 @@ h2 {
 }
 
 p {
-  word-spacing: 0.1rem;
+  word-spacing: 0rem;
 }
 
 a {
@@ -140,8 +141,8 @@ a {
 
 .layout {
   margin: 0.5rem;
-  max-width: $large-screen;
-  padding: 0.5rem 0.5rem;
+  max-width: $max-card-width;
+  padding: 1rem 1rem;
 }
 
 .layout .card {
@@ -161,6 +162,7 @@ a {
 }
 
 .layout .card .description {
+  padding: 0 1.8rem;
   text-align: left;
 }
 
@@ -445,7 +447,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0rem 2rem;
+  padding: 0rem 0rem;
 
   div {
     padding: 0.5rem;
@@ -498,9 +500,6 @@ a {
     display: none;
   }
 
-  .filter-button[id="language"]{
-    color: $skill-color-language;
-  }
 
 }
 
@@ -590,7 +589,7 @@ a {
     color: $text-color;
     display: block;
     line-height: 2.65em;
-    margin: 0.2rem;
+    margin: 0rem;
   }
 
   .time {
@@ -603,9 +602,10 @@ a {
 
   .desc {
     background: $bg-color;
+    line-height: 1.2rem;
     border-radius: 0.25rem;
     margin: 0.025em 0 0 0.1rem;
-    padding: 0.025rem 0.5rem 1rem 0.5rem;
+    padding: 0.025rem 0.5rem 0.5rem 0.5rem;
     text-align: center;
   }
 }
@@ -629,7 +629,7 @@ a {
 }
 
 .project-desc {
-  line-height: 1rem;
+  line-height: 1.2rem;
 }
 
 .project-stars-forks {
@@ -638,14 +638,15 @@ a {
 }
 
 .tag-wrapper {
-  margin: 0.75rem 0 0 0;
+  margin: 1rem 0 0 0;
 }
 
 .tag {
   border-radius: 0.25rem;
   display: inline-block;
-  margin-bottom: 0.25rem;
-  padding: 0.25rem;
+  margin-bottom: 0.3rem;
+  padding: 0.3rem;
+  line-height: 1.2rem;
 }
 
 /* Contact Card */
@@ -704,7 +705,7 @@ a {
 @media only screen and (min-width: $small-screen) {
   .layout {
     margin: 1rem auto;
-    padding: 2rem 2rem;
+    padding: 2rem 1rem;
   }
 
   .layout .card .subtitle {
@@ -894,7 +895,7 @@ a {
   .timeline-wrapper {
     .timeline {
       margin: 0 auto;
-      width: 39.25rem;
+      width: 42.25rem;
     }
 
     .timeline li:after {
@@ -906,7 +907,7 @@ a {
     .direction-l {
       float: left;
       text-align: right;
-      width: 18.5rem;
+      width: 20rem;
 
       .hexagon {
         left: auto;
@@ -915,12 +916,12 @@ a {
       }
 
       .flag-wrapper {
-        display: inline-block;
+        display: relative;
         text-align: right;
       }
 
       .time-wrapper {
-        float: left;
+        float: bottom;
         margin-top: -0.1rem;
       }
 
@@ -932,7 +933,7 @@ a {
     .direction-r {
       float: right;
       text-align: left;
-      width: 18.5rem;
+      width: 20rem;
 
       .hexagon {
         left: -1.6rem;
@@ -946,7 +947,7 @@ a {
       }
 
       .time-wrapper {
-        float: right;
+        float: bottom;
         margin-top: -0.1rem;
       }
 
@@ -976,7 +977,7 @@ a {
   }
 }
 
-@media only screen and (min-width: $medium-screen) {
+/* @media only screen and (min-width: $medium-screen) {
   .layout {
     padding: 3rem 3rem;
   }
@@ -991,7 +992,7 @@ a {
 
   .timeline-wrapper {
     .timeline {
-      width: 49rem;
+      width: 48rem;
     }
 
     .direction-l {
@@ -1008,37 +1009,41 @@ a {
       width: 45%;
     }
   }
-}
+} */
 
-@media only screen and (min-width: $large-screen) {
+/*@media only screen and (min-width: $large-screen) {
   .layout {
-    padding: 5rem 5rem;
+    padding: 3rem 3rem;
+  }
+
+  .layout .card {
+    padding: 1rem 3rem;
   }
 
   #skills .filter-button {
-    width: 22%;
+    width: 21.5%;
   }
 
   .timeline-wrapper {
     .timeline {
-      width: 58rem;
+      width: 46rem;
     }
 
     .direction-l {
-      width: 27.9rem;
+      width: 21.9rem;
     }
 
     .direction-r {
-      width: 27.9rem;
+      width: 21.9rem;
     }
   }
 
   .projects-wrapper {
     > * {
-      width: 46%;
+      width: 45%;
     }
   }
-}
+}*/
 
 /* Reusable Animations */
 
