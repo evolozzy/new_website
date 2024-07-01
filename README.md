@@ -1,4 +1,4 @@
-# Neumorphism <!-- omit in toc -->
+# My Personal website based on Neumorphism <!-- omit in toc -->
 
 > Neumorphism designed Jekyll theme for personal websites, portfolios, and resumes.
 
