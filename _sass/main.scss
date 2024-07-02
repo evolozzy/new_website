@@ -10,12 +10,15 @@
 $small-screen: 48em !default;
 $medium-screen: 60em !default;
 $large-screen: 75em !default;
-$max-card-width: 49em !default;
+$max-card-width: 50em !default;
 $font-family: "Source Sans 3", sans-serif;
 $font-family-numbers: "Ubuntu Mono";
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 400;
+$timeline-width: $max-card-width - 5.75em;
+$timeline-direction-width: calc(($timeline-width - 2.21em) / 2);
+
 
 /* Palette */
 
@@ -162,7 +165,7 @@ a {
 }
 
 .layout .card .description {
-  padding: 0 1.8rem;
+  padding: 0 1.5rem;
   text-align: left;
 }
 
@@ -551,6 +554,7 @@ a {
   .flag-wrapper {
     position: relative;
     text-align: center;
+    padding: 0rem 0rem;
   }
 
   .flag {
@@ -575,7 +579,7 @@ a {
     }
 
     &:hover span {
-      letter-spacing: 0.05rem;
+      letter-spacing: 0.025rem;
       padding-right: 0rem;
     }
 
@@ -767,7 +771,7 @@ a {
       transition: 0.75s;
 
       &:hover {
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.12rem;
         transition: 0.75s;
       }
     }
@@ -895,7 +899,7 @@ a {
   .timeline-wrapper {
     .timeline {
       margin: 0 auto;
-      width: 42.25rem;
+      width: $timeline-width;
     }
 
     .timeline li:after {
@@ -907,7 +911,7 @@ a {
     .direction-l {
       float: left;
       text-align: right;
-      width: 20rem;
+      width: $timeline-direction-width;
 
       .hexagon {
         left: auto;
@@ -933,7 +937,7 @@ a {
     .direction-r {
       float: right;
       text-align: left;
-      width: 20rem;
+      width: $timeline-direction-width;
 
       .hexagon {
         left: -1.6rem;
