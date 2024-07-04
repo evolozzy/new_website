@@ -120,4 +120,151 @@ function randomizeOrder() {
     frag.appendChild(divs[Math.floor(Math.random() * divs.length)]);
   }
   parent.appendChild(frag);
-}
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menuBox = document.getElementById('menu-box');
+
+    console.log('Menu Button:', menuBtn);  // Check if the button is found
+    console.log('Menu Box:', menuBox);    // Check if the menu is found
+
+    if (!menuBtn || !menuBox) {
+        console.error('The menu button or box is not found!');
+        return;  // Stop further execution if elements are not found
+    }
+
+    menuBtn.addEventListener('click', function() {
+        console.log('Menu button clicked');
+        menuBox.classList.toggle('show');
+        this.classList.toggle('active');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Anchor clicked:', this.getAttribute('href'));
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            console.log('Target Element:', targetElement);
+
+            if (!targetElement) {
+                console.error('Target element not found:', targetId);
+                return;
+            }
+
+            const elementPosition = targetElement.offsetTop;
+            const offset = window.innerHeight / 4 - targetElement.offsetHeight / 4;
+            const scrollTarget = elementPosition - offset;
+
+            window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+        });
+    });
+});
+
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    // Handling anchor clicks for smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const elementPosition = targetElement.offsetTop;
+                const offset = window.innerHeight / 2.8 - targetElement.offsetHeight / 2.8;
+                const scrollTarget = elementPosition - offset;
+
+                window.scrollTo({
+                    top: scrollTarget,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Toggle menu visibility
+    const menuBtn = document.getElementById('menu-btn');
+    const menuBox = document.getElementById('menu-box');
+
+    menuBtn.addEventListener('click', function() {
+        menuBox.classList.toggle('show');
+    });
+    
+});
+*/
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+              const elementPosition = targetElement.offsetTop;
+              const offset = window.innerHeight / 2.8 - targetElement.offsetHeight / 2.8;
+              const scrollTarget = elementPosition - offset;
+
+              window.scrollTo({
+                  top: scrollTarget,
+                  behavior: 'smooth'
+              });
+          }
+      });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menu-btn');
+    const menuBox = document.getElementById('menu-box');
+
+    menuBtn.addEventListener('click', function() {
+        menuBox.classList.toggle('show');
+    });
+});
+*/
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu__toggle');
+
+    menuToggle.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default action which can cause jumps
+        this.checked = !this.checked; // Toggle the checked state manually
+    });
+});
+
+
+
+/*
+ let navWrapper = document.querySelector('.nav-wrapper'),
+      navToogler =  document.querySelector('.nav-toogler')
+
+    navToogler.addEventListener('click', function (event) {
+      navWrapper.classList.toggle('active')
+    });
+*/
+/*document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('show-menu');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('show-menu');
+        this.classList.toggle('active');
+    });
+});*/
