@@ -122,46 +122,59 @@ function randomizeOrder() {
   parent.appendChild(frag);
 };
 
+// Menu Actions
+
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
+  console.log('DOM fully loaded and parsed');
 
-    const menuBtn = document.getElementById('menu-btn');
-    const menuBox = document.getElementById('menu-box');
+  const smallScreenSize = getComputedStyle(document.documentElement).getPropertyValue('--small-screen').trim();
+  const smallScreenSizeNum = parseInt(smallScreenSize, 10);
+  const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  const smallScreenSizePx = smallScreenSizeNum * rootFontSize;
+  const minHeightPx = 800; 
 
-    console.log('Menu Button:', menuBtn);  // Check if the button is found
-    console.log('Menu Box:', menuBox);    // Check if the menu is found
+  const menuBtn = document.getElementById('menu-btn');
+  const menuBox = document.getElementById('menu-box');
+  const menuItems = document.querySelectorAll('.menu__item'); // All menu items
 
-    if (!menuBtn || !menuBox) {
-        console.error('The menu button or box is not found!');
-        return;  // Stop further execution if elements are not found
-    }
+  console.log('Menu Button:', menuBtn);  // Check if the button is found
+  console.log('Menu Box:', menuBox);    // Check if the menu is found
 
-    menuBtn.addEventListener('click', function() {
-        console.log('Menu button clicked');
-        menuBox.classList.toggle('show');
-        this.classList.toggle('active');
+  if (!menuBtn || !menuBox) {
+    console.error('The menu button or box is not found!');
+    return;  // Stop further execution if elements are not found
+  }
+
+  function toggleMenu() {
+    menuBox.classList.toggle('show');
+    menuBtn.classList.toggle('active');
+  }
+
+  menuBtn.addEventListener('click', toggleMenu);
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        const elementPosition = targetElement.offsetTop;
+        const offset = window.innerHeight / 4 - targetElement.offsetHeight / 4;
+        window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
+      } else {
+        console.error('Target element not found:', targetId);
+      }
     });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('Anchor clicked:', this.getAttribute('href'));
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            console.log('Target Element:', targetElement);
-
-            if (!targetElement) {
-                console.error('Target element not found:', targetId);
-                return;
-            }
-
-            const elementPosition = targetElement.offsetTop;
-            const offset = window.innerHeight / 4 - targetElement.offsetHeight / 4;
-            const scrollTarget = elementPosition - offset;
-
-            window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
-        });
+  });
+    
+  menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Check if the current window width is below a certain threshold, e.g., 768px
+      if (window.innerWidth <= smallScreenSizePx || window.innerHeight <= minHeightPx) {
+        toggleMenu();  
+      }
     });
+  });
 });
 

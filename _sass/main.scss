@@ -1,26 +1,29 @@
 /* Imports */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.css");
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+//@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+//@import url("https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.css");
 
 /* Variables */
 
 $small-screen: 48em !default;
 $medium-screen: 60em !default;
 $large-screen: 75em !default;
-$max-card-width: 48em !default;
+$max-card-width: $small-screen !default;
 $font-family: "Source Sans 3", sans-serif;
 $font-family-headers: "Montserrat";
-$font-family-numbers: "Hack";
+$font-family-numbers: "Ubuntu Mono";
 $font-size-base: 1rem !default;
 $font-size-h1: 2rem !default;
 $font-weight-strong: 600;
 $timeline-width: $max-card-width - 5.75em;
 $timeline-direction-width: calc(($timeline-width - 2.21em) / 2);
 $border-radius: 0.25rem;
-$medium: 768px !default;
 
+:root {
+  --small-screen: #{$small-screen};
+}
 
 /* Palette */
 
@@ -33,7 +36,7 @@ $black: #000;
 $black-transparent: rgba(0, 0, 0, 0.5);
 $darkgray: rgba(40, 47, 47, 1);
 $darkgray-transparent: rgba(20, 20, 20, 0.4);
-$darkgray-lesstransparent: rgba(20, 20, 20, 0.9);
+$darkgray-lesstransparent: rgba(20, 20, 20, 0.95);
 $gray: rgba(105, 105, 105, 1);
 $gray-transparent: rgba(105, 105, 105, 0.15);
 $gray-lesstransparent: rgba(105, 105, 105, 0.15);
@@ -291,10 +294,12 @@ a {
   width: 100%;
   height: 100%;
   z-index: 4000;
+  pointer-events: none;
 }
 
 .menu__box {
   position: relative;
+  pointer-events: all;
   display: flex;
   flex-direction: column;
   top: -100%;
@@ -325,8 +330,9 @@ a {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  top: 1rem;
-  left: 1rem;
+  pointer-events: all;
+  top: 0.5rem;
+  left: 2rem;
   width: 50px;
   height: 40px;
   padding: 10px;
