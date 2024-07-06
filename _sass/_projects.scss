@@ -1,0 +1,45 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+@import 'layout';
+
+/* Projects Card */
+
+.project {
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0.25rem 1rem;
+  }
+  
+  .project .name-link-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .project .name-link-wrapper .links {
+    font-size: 1.5rem;
+    margin: 0.5rem 0.5rem;
+  }
+  
+  .project-desc {
+    line-height: 1.2rem;
+  }
+  
+  .project-stars-forks {
+    fill: $text-color;
+    font-family: $font-family-numbers;
+  }
+  
+  .tag-wrapper {
+    margin: 1rem 0 0 0;
+  }
+  
+  .tag {
+    border-radius: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    padding: 0.3rem;
+    line-height: 1.2rem;
+  }
+  

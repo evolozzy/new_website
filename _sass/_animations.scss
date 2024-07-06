@@ -1,0 +1,21 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+@import 'layout';
+
+ /* Reusable Animations */
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 0.5rem;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}

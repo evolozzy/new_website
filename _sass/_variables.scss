@@ -1,0 +1,20 @@
+@import 'fonts';
+
+/* Variables */
+
+$small-screen: 48em !default;
+$medium-screen: 60em !default;
+$large-screen: 75em !default;
+$max-card-width: $small-screen !default;
+$font-family: "Source Sans Pro", sans-serif;
+$font-family-headers: "Montserrat", serif;
+$font-family-numbers: "Hack", monospace;
+$font-size-base: 1rem !default;
+$font-size-h1: 2rem !default;
+$h1-line-height: 2rem;
+$font-size-h2: 2rem !default;
+$h2-line-height: 2rem;
+$font-weight-strong: 600;
+$timeline-width: $max-card-width - 5.75em;
+$timeline-direction-width: calc(($timeline-width - 2.21em) / 2);
+$border-radius: 0.25rem;

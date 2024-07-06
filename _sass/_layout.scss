@@ -1,0 +1,51 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+
+/* Layout */
+
+.layout {
+  margin: 0.5rem;
+  max-width: $max-card-width;
+  padding: 1rem 1rem;
+}
+
+.layout .card {
+  background: $card-bg-color;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 1rem 1rem;
+}
+
+.layout .card .title {
+  text-align: center;
+  position: relative;
+}
+
+.layout .card .subtitle {
+  text-align: center;
+}
+
+.layout .card .description {
+  padding: 0 1.5rem;
+  text-align: left;
+}
+
+.neumorphism-button {
+  background: $neumorphism-button-bg;
+  box-shadow: $neumorphism-button-box-shadow;
+}
+
+@mixin neumorphism-button-pressed {
+  background: $neumorphism-button-pressed-bg;
+  box-shadow: $neumorphism-button-pressed-box-shadow;
+}
+
+.neumorphism-card {
+  box-shadow: $neumorphism-card-box-shadow;
+}
+
+.neumorphism-card-big {
+  box-shadow: $neumorphism-card-big-box-shadow;  
+}

@@ -1,0 +1,70 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+
+
+/* General */
+
+html {
+  background: $bg-color;
+  color: $text-color;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  font-weight: normal;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+}
+
+/* Typography */
+
+h1 {
+  font-size: $font-size-h1;
+  font-family: $font-family-headers;
+  font-weight: $font-weight-strong;
+  line-height: $h1-line-height;
+}
+
+h2 {
+  color: $primary-color;
+  font-family: $font-family-headers;
+  font-size: $font-size-h2;
+  font-weight: $font-weight-strong;
+  text-shadow: $h2-text-shadow;
+  line-height: $h2-line-height;
+}
+
+p {
+  word-spacing: 0rem;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+.highlight-title {
+  color: $accent-color;
+  text-shadow: $highlight-title-text-shadow;
+}
+
+.highlight-link {
+  box-shadow: $highlight-link-box-shadow;
+  box-sizing: border-box;
+  color: $link-color;
+  display: inline-block;
+  padding: 0.125rem 0.125rem;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: $highlight-link-box-shadow-hover;
+    color: $text-color;
+  }
+}

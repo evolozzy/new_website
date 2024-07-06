@@ -1,0 +1,26 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+@import 'layout';
+
+/* Footer */
+
+.footer {
+  background: $bg-color;
+  color: $text-color;
+  margin: 0.1rem;
+  padding: 0.1rem;
+  font-size: small;
+  text-align: center;
+}
+
+.footer a {
+  color: $link-color;
+
+  &:hover,
+  &:focus {
+    background: $bg-color;
+    color: $text-color;
+  }
+}

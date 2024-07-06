@@ -1,0 +1,67 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+@import 'layout';
+
+/* Skills Section */
+
+#skills {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0rem 0rem;
+
+  div {
+    padding: 0.5rem;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+  }
+
+  div[skill-type="language"] {
+    color: $skill-color-language;
+  }
+
+  div[skill-type="framework"] {
+    color: $skill-color-framework;
+  }
+
+  div[skill-type="tool"] {
+    color: $skill-color-tool;
+  }
+
+  div[skill-weight="1"] {
+    font-size: 0.5rem;
+    line-height: 0.1rem;
+  }
+
+  div[skill-weight="2"] {
+    font-size: 1rem;
+    line-height: 0.5rem;
+  }
+
+  div[skill-weight="3"] {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+
+  div[skill-weight="4"] {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+
+  div[skill-weight="5"] {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .filter-button {
+    font-family: $font-family-headers;
+    display: none;
+  }
+}

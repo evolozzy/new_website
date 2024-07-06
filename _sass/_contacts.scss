@@ -1,0 +1,56 @@
+@import 'fonts';
+@import 'variables';
+@import 'theme';
+@import 'general';
+@import 'layout';
+
+/* Contact Card */
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+
+  .social-link {
+    position: relative;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.25rem;
+    text-align: center;
+    width: 3rem;
+
+    .social {
+      font-size: 1.5rem;
+    }
+
+    .social-svg {
+      fill: $accent-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: jump 1s infinite alternate;
+
+      .social-svg {
+        fill: $social-icon-fill;
+      }
+    }
+  }
+
+  .black:hover {
+    .social-svg {
+      fill: $social-black-icon;
+    }
+  }
+
+  .linkedin:hover {
+    .social-svg {
+      fill: #007bb6;
+    }
+  }
+
+  .twitter:hover {
+    .social-svg {
+      fill: #1da1f2;
+    }
+  }
+}
