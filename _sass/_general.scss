@@ -18,14 +18,15 @@ body {
 
 h1 {
   font-size: $font-size-h1;
-  font-family: $font-family-headers;
+  font-family: $font-family-h1;
   font-weight: $font-weight-strong;
   line-height: $h1-line-height;
 }
 
 h2 {
   color: $primary-color;
-  font-family: $font-family-headers;
+  font-family: $font-family-h2;
+  font-style: italic;
   font-size: $font-size-h2;
   font-weight: $font-weight-strong;
   text-shadow: $h2-text-shadow;

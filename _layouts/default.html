@@ -55,11 +55,15 @@
 
 <div class="hamburger-menu">
   <ul class="menu__box" id="menu-box">
-    <li><a class="menu__item" href="/">Home</a></li>
+    <li><a class="menu__item" href="/">
+        <svg class="social-svg" height="24" width="24" >
+          <use xlink:href="{{ "/assets/img/solid.svg#home" | prepend: site.baseurl }}"></use>
+        </svg>
+      </a></li>
     <li><a class="menu__item" href="#about-me-section">About</a></li>
     <li><a class="menu__item" href="#skills-section">Skills</a></li>
-    <li><a class="menu__item" href="#timeline-section">Eductation & Experience</a></li>
-    <li><a class="menu__item" href="#github-projects">Github Projects</a></li>
+    <li><a class="menu__item" href="#timeline-section">Timeline</a></li>
+    <li><a class="menu__item" href="#github-projects">Projects</a></li>
     <li><a class="menu__item" href="/blog">Blog</a></li>
     <li><a class="menu__item" href="#contact-section">Contact</a></li>
   </ul>

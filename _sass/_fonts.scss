@@ -68,3 +68,17 @@
     font-weight: 100 900;  // Range of weights supported
     font-style: italic;  // Range from normal to italic
 }
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;  // Range of weights supported
+  font-style: normal;  // Range from normal to italic
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../fonts/Lora-Italic-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;  // Range of weights supported
+  font-style: italic;  // Range from normal to italic
+}

@@ -34,7 +34,7 @@
 .hamburger-menu {
   left: 50%;
   transform: translateX(-50%);
-  width: auto;
+  width: $small-screen;
 }
 
 .menu__box {
@@ -42,7 +42,7 @@
   top: -150px;
   width: auto;
   height: auto;
-  padding: 40px 20px 10px;
+  padding: 10px 20px 10px;
 }
 
 .menu__btn {

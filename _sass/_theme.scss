@@ -5,26 +5,39 @@ $terminal-green: #00ff66;
 $greenblue: #4fe0b7;
 $main-blue: #60c0ff;
 $dodger-blue: #1e90ff;
+$darkblue: rgba(37,42,52,1);
+$darkblue-transparent: rgba(27,30,38,0.4);
+$darkblue-lesstransparent: rgba(27,30,38,0.95);
+$darkblue-moretransparent: rgba(54,61,76,0.15);
+$grayblue-transparent: rgba(72,82,102,0.15);
+$grayblue: rgba(72,82,102,1);
+$lightblue: rgba(108,123,153,1);
+$lighterblue: rgba(144,164,204,1);
+$lightblue-transparent: rgba(108,123,153,0.4);
+$lightblue-moretransparent: rgba(108,123,153,0.2);
 $black: #000;
 $black-transparent: rgba(0, 0, 0, 0.5);
-$darkgray: rgba(40, 47, 47, 1);
-$darkgray-transparent: rgba(20, 20, 20, 0.4);
-$darkgray-lesstransparent: rgba(20, 20, 20, 0.95);
-$gray: rgba(105, 105, 105, 1);
-$gray-transparent: rgba(105, 105, 105, 0.15);
-$gray-lesstransparent: rgba(105, 105, 105, 0.15);
-$lightgray: rgba(210, 210, 210, 1);
-$lightgray-transparent: rgba(210, 210, 210, 0.4);
-$lightgray-moretransparent: rgba(210, 210, 210, 0.2);
-$white: #fff;
+//$darkgray: rgba(40, 47, 47, 1);
+//$darkgray-transparent: rgba(20, 20, 20, 0.4);
+//$darkgray-lesstransparent: rgba(20, 20, 20, 0.95);
+//$gray: rgba(105, 105, 105, 1);
+//$gray-transparent: rgba(105, 105, 105, 0.15);
+//$gray-lesstransparent: rgba(105, 105, 105, 0.15);
+//$lightgray: rgba(210, 210, 210, 1);
+//$lightgray-transparent: rgba(210, 210, 210, 0.4);
+//$lightgray-moretransparent: rgba(210, 210, 210, 0.2);
+//$white: #fff;
+$lesswhite: #eaeaea;
+$lesserwhite: #aeaeae;
 
 
-$text-color: $white !default;
-$bg-color: $darkgray;
+$text-color: $lesswhite !default;
+//$bg-color: $darkgray;
+$bg-color: $darkblue;
 
 $card-bg-color: linear-gradient(145deg,
-    $gray-transparent 15%,
-    $darkgray 80%);
+    $darkblue-moretransparent 15%,
+    $darkblue 80%);
 
 
 $primary-color: $leaf-green;
@@ -36,20 +49,20 @@ $skill-color-tool: $greenblue;
 $shade-color: $black-transparent;
 $hexagon-color: $greenblue;
 $card-big-shadow-dark: $black;
-$card-big-shadow-light: $gray;
+$card-big-shadow-light: $grayblue;
 $card-shadow-dark: $black;
-$card-shadow-light: $gray;
-$button-fill-dark: $darkgray-transparent;
-$button-fill-light: $gray-transparent;
+$card-shadow-light: $grayblue;
+$button-fill-dark: $darkblue-transparent;
+$button-fill-light: $grayblue-transparent;
 $button-shadow-dark: $black;
-$button-shadow-light: $lightgray-transparent;
+$button-shadow-light: $lightblue-transparent;
 $button-pressed-text: $primary-color;
-$social-icon-fill: $white;
-$social-icon-circle: $white;
+$social-icon-fill: $lesswhite;
+$social-icon-circle: $lesswhite;
 $social-hover-fill: $black;
 $social-black-icon: $black;
-$timeline-line-light: $lightgray;
-$timeline-line-lighter: $lightgray-transparent;
+$timeline-line-light: $grayblue;
+$timeline-line-lighter: $lightblue-transparent;
 $timeline-arrows-color: $accent-color;
 $timeline-line-color: 
     linear-gradient(to bottom,
@@ -58,11 +71,11 @@ $timeline-line-color:
     $timeline-line-light 92%,
     $timeline-line-lighter 100%);
 
-$menu-bg-color: $darkgray-lesstransparent;
-$menu-shadow-color: $darkgray-transparent;
+$menu-bg-color: $darkblue-lesstransparent;
+$menu-shadow-color: $darkblue-transparent;
 $menu-box-shadow: 3px 6px 6px $menu-shadow-color;
-$menu-button-color: $lightgray;
-$menu-button-box-color: $lightgray-transparent;
+$menu-button-color: $lighterblue;
+$menu-button-box-color: $lightblue-transparent;
 $menu-button-box-shadow:  
     rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
@@ -72,10 +85,10 @@ $menu-button-box-shadow:
     rgba(0, 0, 0, 0.09) 0px 8px 4px, 
     rgba(0, 0, 0, 0.09) 0px 16px 8px, 
     rgba(0, 0, 0, 0.09) 0px 32px 16px;
-$menu-item-color: $text-color;
+$menu-item-color: $lesserwhite;
 $menu-item-highlight-color: $primary-color;
-$menu-item-bg-color: $lightgray-moretransparent;
-$menu-item-highlight-shadow-color: $lightgray-moretransparent;
+$menu-item-bg-color: $darkblue-transparent;
+$menu-item-highlight-shadow-color: $lightblue;
 $menu-item-text-shadow-color: $black-transparent;
 $menu-item-text-shadow: 1px 1px 2px $menu-item-text-shadow-color;
 $menu-item-highlight-shadow:  0px 0px 4px $menu-item-highlight-shadow-color;
