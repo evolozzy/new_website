@@ -64,9 +64,9 @@
   display: block;
   position: absolute;
   width:30px;
-  height: 2px;
+  height: 3px;
   background-color: $menu-button-color;
-  transition: transform .5s ease, top 0.5s ease, opacity 0.5s ease;
+  transition: transform .5s ease, top 0.5s ease, background 0.5s ease;
   border-radius: 4px;
 }
 
@@ -81,27 +81,25 @@
 }
 
 .menu__btn.active>span {
-  transform: rotate(45deg);
+  //transform: rotate(45deg);
+  background: transparent;
 }
 
 .menu__btn.active>span::before {
   content: '';
   position: absolute;
-  height: 2px;
+  height: 3px;
   top: 0;
-  transform: rotate(0deg);
-  /* This should align with the main span, might not be necessary */
-  opacity: 0;
+  transform: rotate(45deg);
   background-color: $menu-button-color;
 }
 
 .menu__btn.active>span::after {
   content: '';
   position: absolute;
-  height: 2px;
+  height: 3px;
   top: 0;
-  transform: rotate(90deg);
-  /* This makes it perpendicular */
+  transform: rotate(-45deg);
   background-color: $menu-button-color;
 }
 
@@ -119,6 +117,7 @@
   transition-duration: .25s;
   .social-svg{ 
     fill: $menu-item-color;
+    padding: 2px 0 0 0;
   }
 }
 
@@ -129,4 +128,7 @@
   transform: scale(1.1);
   border-radius: 4px;
   left: auto;
+  .social-svg{
+    fill: $menu-item-highlight-color;
+  }
 }

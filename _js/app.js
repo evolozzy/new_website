@@ -125,8 +125,6 @@ function randomizeOrder() {
 // Menu Actions
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM fully loaded and parsed');
-
   const smallScreenSize = getComputedStyle(document.documentElement).getPropertyValue('--small-screen').trim();
   const smallScreenSizeNum = parseInt(smallScreenSize, 10);
   const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -136,9 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const menuBtn = document.getElementById('menu-btn');
   const menuBox = document.getElementById('menu-box');
   const menuItems = document.querySelectorAll('.menu__item'); // All menu items
-
-  console.log('Menu Button:', menuBtn);  // Check if the button is found
-  console.log('Menu Box:', menuBox);    // Check if the menu is found
 
   if (!menuBtn || !menuBox) {
     console.error('The menu button or box is not found!');
