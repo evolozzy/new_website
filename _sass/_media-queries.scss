@@ -119,7 +119,7 @@
       opacity: 0;
       padding: 0;
       width: 0;
-      transition: opacity 0s;
+      transition: opacity 0s, transform 0s, position 0s;
     }
 
     input[id="all"]:checked+.filter-button {
