@@ -235,6 +235,39 @@
 }
 
 
+@media only screen and (max-width: $small-screen) {
+  #skills {
+    div {
+      padding: 0.3rem;
+    }
+
+    div[skill-weight="1"] {
+      font-size: 0.25rem;
+      line-height: 0rem;
+    }
+
+    div[skill-weight="2"] {
+      font-size: 0.5rem;
+      line-height: 0rem;
+    }
+
+    div[skill-weight="3"] {
+      font-size: 0.75rem;
+      line-height: 0.25rem;
+    }
+
+    div[skill-weight="4"] {
+      font-size: 1.25rem;
+      line-height: 0.25rem;
+    }
+
+    div[skill-weight="5"] {
+      font-size: 2rem;
+      line-height: 1rem;
+    }
+  }
+}
+
 /* 
 
 @media only screen and (min-width: $large-screen) {

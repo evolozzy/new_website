@@ -169,6 +169,46 @@
   }
 }
 
+@media only screen and (max-width: $small-screen) {
+  .timeline-wrapper {
+    .timeline {
+      line-height: 1rem;
+      padding: 0;
+    }
+  
+    .hexagon {
+      transform: scale(0.75);
+    }
+  
+    .flag-wrapper {
+      position: relative;
+      text-align: center;
+      padding: 0rem 0rem;
+    }
+  
+    .flag {
+      font-size: small;
+      padding: 0.2rem ;
+    }
+  
+    .time-wrapper {
+      font-size: small;
+    }
+  
+    .time {
+      padding: .3rem .4rem;
+      line-height: 1rem;
+    }
+  
+    .desc {
+      font-size: small;
+      margin: 0.025em 0 0 0.1rem;
+      padding: 0.025rem 0.5rem 0.5rem 0.5rem;
+    }
+  }
+
+}
+
 /* 
 
 @media only screen and (min-width: $large-screen) {
