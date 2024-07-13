@@ -62,3 +62,195 @@
     display: none;
   }
 }
+
+@media only screen and (min-width: $medium-screen) {
+
+  #skills {
+    div[skill-weight="1"] {
+      font-size: 0.75rem;
+      line-height: 0rem;
+    }
+
+    div[skill-weight="2"] {
+      font-size: 1.5rem;
+      line-height: 0.5rem;
+    }
+
+    div[skill-weight="3"] {
+      font-size: 2.25rem;
+      line-height: 1.25rem;
+    }
+
+    div[skill-weight="4"] {
+      font-size: 3.75rem;
+      line-height: 2.75rem;
+    }
+
+    div[skill-weight="5"] {
+      font-size: 6rem;
+      line-height: 5rem;
+    }
+
+    .filter-button {
+      border-radius: 0.25rem;
+      cursor: pointer;
+      display: unset;
+      margin: 0 0.25rem 1rem;
+      padding: 0.25rem 0.5rem;
+      text-align: center;
+      width: 21%;
+      transition: 0.75s;
+
+      &:hover {
+        letter-spacing: 0.15rem;
+        transition: 0.75s;
+      }
+    }
+
+    input[id="language"]+.filter-button {
+      &:hover {
+        color: $skill-color-language;
+      }
+    }
+
+    input[id="framework"]+.filter-button {
+      &:hover {
+        color: $skill-color-framework;
+      }
+    }
+
+    input[id="tool"]+.filter-button {
+      &:hover {
+        color: $skill-color-tool;
+      }
+    }
+
+    @mixin filter-out {
+      height: 0;
+      margin: 0;
+      opacity: 0;
+      padding: 0;
+      width: 0;
+      transition: opacity 0s, transform 0s, position 0s;
+    }
+
+    input[id="all"]:checked+.filter-button {
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="language"]:checked+.filter-button {
+      color: $skill-color-language;
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="language"]:checked~input[id="framework"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-framework;
+      }
+    }
+
+    input[id="language"]:checked~input[id="tool"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-tool;
+      }
+    }
+
+    input[id="framework"]:checked+.filter-button {
+      color: $skill-color-framework;
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="framework"]:checked~input[id="language"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-language;
+      }
+    }
+
+    input[id="framework"]:checked~input[id="tool"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-tool;
+      }
+    }
+
+    input[id="tool"]:checked+.filter-button {
+      color: $skill-color-tool;
+      font-weight: $font-weight-strong;
+      @include neumorphism-button-pressed();
+    }
+
+    input[id="tool"]:checked~input[id="language"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-language;
+      }
+    }
+
+    input[id="tool"]:checked~input[id="framework"]+.filter-button {
+      color: $text-color;
+
+      &:hover {
+        color: $skill-color-framework;
+      }
+    }
+
+    input[id="all"]:checked~input[id="language"]+.filter-button {
+      color: $skill-color-language;
+    }
+
+    input[id="all"]:checked~input[id="framework"]+.filter-button {
+      color: $skill-color-framework;
+    }
+
+    input[id="all"]:checked~input[id="tool"]+.filter-button {
+      color: $skill-color-tool;
+    }
+
+    input[id="language"]:checked~div[skill-type="framework"],
+    input[id="language"]:checked~div[skill-type="tool"] {
+      @include filter-out;
+    }
+
+    input[id="framework"]:checked~div[skill-type="language"],
+    input[id="framework"]:checked~div[skill-type="tool"] {
+      @include filter-out;
+    }
+
+    input[id="tool"]:checked~div[skill-type="language"],
+    input[id="tool"]:checked~div[skill-type="framework"] {
+      @include filter-out;
+    }
+  }
+}
+
+
+/* 
+
+@media only screen and (min-width: $large-screen) {
+  #skills .filter-button {
+    width: 21.5%;
+  }
+}
+
+*/
+
+/*
+
+@media only screen and (min-width: $xlarge-screen) {
+  #skills .filter-button {
+    width: 21.5%;
+  }
+}
+
+*/

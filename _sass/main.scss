@@ -14,8 +14,4 @@
 @import 'projects';
 @import 'contacts';
 @import 'animations';
-@import 'media-queries';
 
-:root {
-  --small-screen: #{$small-screen};
-}

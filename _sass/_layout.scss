@@ -44,3 +44,60 @@
 .neumorphism-card-big {
   box-shadow: $neumorphism-card-big-box-shadow;  
 }
+
+@media only screen and (min-width: $small-screen) {
+  .layout {
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+  }
+
+  .layout .card .subtitle {
+    font-size: 1.25rem;
+  }
+
+  .layout .card .description {
+    font-size: 1.25rem;
+  }
+
+  .landing-title h1 {
+    font-size: 3rem;
+  }
+
+  .landing-icons .social-link {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+
+    .social {
+      font-size: 2rem;
+    }
+  }
+}
+
+/*
+
+@media only screen and (min-width: $large-screen) {
+  .layout {
+    padding: 3rem 3rem;
+  }
+
+  .layout .card {
+    padding: 1rem 3rem;
+  }
+}
+
+*/
+
+/*
+
+@media only screen and (min-width: $xlarge-screen) {
+  .layout {
+    padding: 3rem 3rem;
+  }
+
+  .layout .card {
+    padding: 1rem 3rem;
+  }
+}
+
+*/

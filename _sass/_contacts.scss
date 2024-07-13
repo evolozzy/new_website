@@ -48,3 +48,15 @@
     }
   }
 }
+
+@media only screen and (min-width: $medium-screen) {
+  .contact-icons .social-link {
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+
+    .social {
+      font-size: 2rem;
+    }
+  }
+}

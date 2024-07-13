@@ -6,34 +6,73 @@
     padding: 0.25rem 1rem;
   }
   
-  .project .name-link-wrapper {
+.project .name-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+  
+.project .name-link-wrapper .links {
+  font-size: 1.5rem;
+  margin: 0.5rem 0.5rem;
+}
+  
+.project-desc {
+  line-height: 1.2rem;
+}
+  
+.project-stars-forks {
+  fill: $text-color;
+  font-family: $font-family-numbers;
+}
+  
+.tag-wrapper {
+  margin: 1rem 0 0 0;
+}
+  
+.tag {
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  padding: 0.3rem;
+  line-height: 1.2rem;
+}
+
+  
+@media only screen and (min-width: $medium-screen) {
+  .projects-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+
+    >* {
+      width: 44%;
+    }
   }
-  
-  .project .name-link-wrapper .links {
-    font-size: 1.5rem;
-    margin: 0.5rem 0.5rem;
+}
+
+/* 
+
+@media only screen and (min-width: $large-screen) {
+  .projects-wrapper {
+    > * {
+      width: 45%;
+    }
   }
+} 
   
-  .project-desc {
-    line-height: 1.2rem;
+*/
+
+/*
+
+@media only screen and (min-width: $xlarge-screen) {
+  .projects-wrapper {
+    > * {
+      width: 45%;
+    }
   }
+}
   
-  .project-stars-forks {
-    fill: $text-color;
-    font-family: $font-family-numbers;
-  }
-  
-  .tag-wrapper {
-    margin: 1rem 0 0 0;
-  }
-  
-  .tag {
-    border-radius: 0.25rem;
-    display: inline-block;
-    margin-bottom: 0.3rem;
-    padding: 0.3rem;
-    line-height: 1.2rem;
-  }
-  
+*/
+
+
+

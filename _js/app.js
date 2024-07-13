@@ -126,18 +126,27 @@ function randomizeOrder() {
 
 /* Menu Actions */
 const root = getComputedStyle(document.documentElement);
-const smallScreenSize = parseInt(root.getPropertyValue('--small-screen'), 10);
 const rootFontSize = parseFloat(root.fontSize);
-const smallScreenSizePx = smallScreenSize * rootFontSize;
+const smallScreenSize = parseInt(root.getPropertyValue('--breakpoint-small'), 10);
+const mediumScreenSize = parseInt(root.getPropertyValue('--breakpoint-medium'), 10);
+const largeScreenSize = parseInt(root.getPropertyValue('--breakpoint-large'), 10);
+const xlargeScreenSize = parseInt(root.getPropertyValue('--breakpoint-xlarge'), 10);
+const smallScreen = smallScreenSize * rootFontSize;
+const mediumScreen = mediumScreenSize * rootFontSize;
+const largeScreen = largeScreenSize * rootFontSize;
+const xlargeScreen = xlargeScreenSize * rootFontSize;
 
 const breakpoints =  {
-  small: smallScreenSizePx,
+  small: smallScreen,
+  medium: mediumScreen,
+  large: largeScreen,
+  xlarge: xlargeScreen,
 };
 
 window.addEventListener('resize', function() {
   var menuBtn = document.getElementById("menu-btn"); 
   var menuBox = document.getElementById("menu-box");
-  if (window.innerWidth >= breakpoints.small) { 
+  if (window.innerWidth >= breakpoints.medium) { 
     menuBox.style.display = 'flex'; 
     menuBox.classList.add("show"); 
     menuBtn.classList.remove("active"); 
@@ -160,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function manageMenuDisplay() {
-    if (window.innerWidth >= breakpoints.small) {
+    if (window.innerWidth >= breakpoints.medium) {
       menuBox.style.display = 'flex'; 
       menuBox.classList.add("show"); 
       menuBox.style.height = 'auto'; 
@@ -174,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function toggleMenu() {
     const isShown = menuBox.classList.contains("show");
-    if (window.innerWidth < breakpoints.small) {
+    if (window.innerWidth < breakpoints.medium) {
       if (isShown) {
         menuBtn.classList.remove("active");
         menuBox.classList.add('fadeInSlideUp'); 
@@ -207,7 +216,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       if (targetElement) {
         const elementPosition = targetElement.offsetTop;
-        const offset = window.innerHeight / 4 - targetElement.offsetHeight / 4;
+        //const offset = window.innerHeight / 4 - targetElement.offsetHeight / 4;
+        const offset = 100;
         window.scrollTo({ top: elementPosition - offset, behavior: 'smooth' });
       } else {
         console.error('Target element not found:', targetId);
@@ -217,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   menuItems.forEach(item => {
     item.addEventListener('click', function() {
-      if (window.innerWidth <= breakpoints.small) {
+      if (window.innerWidth <= breakpoints.medium) {
         toggleMenu();  
       }
     });

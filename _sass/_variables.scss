@@ -1,9 +1,10 @@
 /* Variables */
 
-$small-screen: 48em !default;
-$medium-screen: 60em !default;
-$large-screen: 75em !default;
-$max-card-width: $small-screen !default;
+$small-screen: 20em !default;
+$medium-screen: 48em !default;
+$large-screen: 64em !default;
+$xlarge-screen: 80em !default;
+$max-card-width: $medium-screen !default;
 $font-family: "Source Sans Pro", sans-serif;
 $font-family-h1: "Montserrat", sans-serif;
 $font-family-h2: "Lora", serif;
@@ -17,3 +18,10 @@ $font-weight-strong: 600;
 $timeline-width: $max-card-width - 5.75em;
 $timeline-direction-width: calc(($timeline-width - 2.21em) / 2);
 $border-radius: 0.25rem;
+
+:root {
+  --breakpoint-small: #{$small-screen};
+  --breakpoint-medium: #{$medium-screen};
+  --breakpoint-large: #{$large-screen};
+  --breakpoint-xlarge: #{$xlarge-screen};
+}

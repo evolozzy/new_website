@@ -139,7 +139,7 @@
   }
 }
 
-@media only screen and (min-width: $small-screen) {
+@media only screen and (min-width: $medium-screen) {
   /* Menu */
 
   #menu-btn {
@@ -156,12 +156,14 @@
     width: auto;
     height: 42px;
     border-radius: 0;
+    pointer-events: none;
     
     ul {
       flex-direction: row;
       justify-content: center;
       align-items: center;
       flex: none;
+      pointer-events: all;
     }
 
     li {
