@@ -1,3 +1,5 @@
+
+
 setTimeout(function() {
   fadeOutPreloader(document.getElementById('preloader'), 69);
 }, 1500);
@@ -122,30 +124,80 @@ function randomizeOrder() {
   parent.appendChild(frag);
 };
 
-// Menu Actions
+/* Menu Actions */
+const root = getComputedStyle(document.documentElement);
+const smallScreenSize = parseInt(root.getPropertyValue('--small-screen'), 10);
+const rootFontSize = parseFloat(root.fontSize);
+const smallScreenSizePx = smallScreenSize * rootFontSize;
+
+const breakpoints =  {
+  small: smallScreenSizePx,
+};
+
+window.addEventListener('resize', function() {
+  var menuBtn = document.getElementById("menu-btn"); 
+  var menuBox = document.getElementById("menu-box");
+  if (window.innerWidth >= breakpoints.small) { 
+    menuBox.style.display = 'flex'; 
+    menuBox.classList.add("show"); 
+    menuBtn.classList.remove("active"); 
+  } else { 
+    if (!menuBox.classList.contains("show")) { 
+      menuBox.style.display = 'none'; 
+    } 
+    menuBtn.classList.remove("active"); 
+  } 
+});
 
 document.addEventListener('DOMContentLoaded', function() {
-  const smallScreenSize = getComputedStyle(document.documentElement).getPropertyValue('--small-screen').trim();
-  const smallScreenSizeNum = parseInt(smallScreenSize, 10);
-  const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-  const smallScreenSizePx = smallScreenSizeNum * rootFontSize;
-  const minHeightPx = 800; 
-
-  const menuBtn = document.getElementById('menu-btn');
-  const menuBox = document.getElementById('menu-box');
-  const menuItems = document.querySelectorAll('.menu__item'); // All menu items
+  var menuBtn = document.getElementById('menu-btn');
+  var menuBox = document.getElementById('menu-box');
+  const menuItems = document.querySelectorAll('.menu__item'); 
 
   if (!menuBtn || !menuBox) {
     console.error('The menu button or box is not found!');
-    return;  // Stop further execution if elements are not found
+    return;  
+  }
+  
+  function manageMenuDisplay() {
+    if (window.innerWidth >= breakpoints.small) {
+      menuBox.style.display = 'flex'; 
+      menuBox.classList.add("show"); 
+      menuBox.style.height = 'auto'; 
+      menuBtn.classList.remove("active"); 
+    } else {
+      menuBox.style.display = 'none'; //
+      menuBox.classList.remove("show"); //
+      menuBtn.classList.remove("active"); //
+    }
   }
 
   function toggleMenu() {
-    menuBox.classList.toggle('show');
-    menuBtn.classList.toggle('active');
+    const isShown = menuBox.classList.contains("show");
+    if (window.innerWidth < breakpoints.small) {
+      if (isShown) {
+        menuBtn.classList.remove("active");
+        menuBox.classList.add('fadeInSlideUp'); 
+        menuBox.classList.remove('fadeInSlideDown'); 
+        menuBox.addEventListener('animationend', function handler() {
+          menuBox.classList.remove("show", 'fadeInSlideUp'); 
+          menuBox.style.display = 'none'; 
+          menuBox.removeEventListener('animationend', handler);
+        });
+      } else {
+        menuBtn.classList.add("active");
+        menuBox.style.display = 'flex'; 
+        menuBox.classList.add('show', 'fadeInSlideDown'); 
+        menuBox.classList.remove('fadeInSlideUp'); 
+      }
+    }
   }
 
-  menuBtn.addEventListener('click', toggleMenu);
+  menuBtn.addEventListener("click", toggleMenu);
+  menuBox.addEventListener("click",toggleMenu);
+  window.addEventListener('resize', manageMenuDisplay);
+  window.addEventListener('orientationchange', manageMenuDisplay);  //
+  manageMenuDisplay();
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -165,8 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
   menuItems.forEach(item => {
     item.addEventListener('click', function() {
-      // Check if the current window width is below a certain threshold, e.g., 768px
-      if (window.innerWidth <= smallScreenSizePx || window.innerHeight <= minHeightPx) {
+      if (window.innerWidth <= breakpoints.small) {
         toggleMenu();  
       }
     });

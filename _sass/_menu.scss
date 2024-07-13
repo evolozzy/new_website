@@ -1,123 +1,129 @@
 /* Menu */
 
-.hamburger-menu {
+#menu-btn {
+  display: block;
   position: fixed;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
   top: 0;
   left: 0;
+  height: 50px;
   width: 100%;
-  height: 100%;
-  z-index: 4000;
-  pointer-events: none;
-}
-
-.menu__box {
-  position: relative;
-  pointer-events: all;
-  display: flex;
-  flex-direction: column;
-  top: -100%;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  color: $text-color;
-  background-color: $menu-bg-color;
-  border-radius: 1rem;
-  box-shadow: $menu-box-shadow;
-  transition: opacity 0.5s ease-in-out, top 0.75s ease;
-  z-index: 4010;
-}
-
-.menu__box.show {
-  opacity: 1;
-  top:0px;
-}
-
-.menu__btn {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  pointer-events: all;
-  top: 0.5rem;
-  left: 2rem;
-  width: 50px;
-  height: 40px;
-  padding: 10px;
-  cursor: pointer;
   z-index: 4020;
-  background-color: $menu-button-box-color; 
-  border-radius: 5px;
-  box-shadow: $menu-button-box-shadow;
   box-sizing: border-box;
+  background-color: $menu-button-box-color; 
+  box-shadow: $menu-button-box-shadow;
 }
 
-
-.menu__btn>span,
-.menu__btn>span::before,
-.menu__btn>span::after {
+#menu-btn>span,
+#menu-btn>span::before,
+#menu-btn>span::after {
+  content: '';
   display: block;
   position: absolute;
-  width:30px;
-  height: 3px;
-  background-color: $menu-button-color;
-  transition: transform .5s ease, top 0.5s ease, background 0.5s ease;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width:40px;
+  height: 5px;
+  background-color: $menu-item-color;
+  transition: transform .5s ease, top 0.5s ease, background-color 0.5s ease;
   border-radius: 4px;
+  
 }
 
-.menu__btn>span::before {
-  content: '';
-  top: -8px;
+#menu-btn>span::before {
+  top: -10px;
 }
 
-.menu__btn>span::after {
-  content: '';
-  top: 8px;
+#menu-btn>span::after {
+  top: 10px;
 }
 
-.menu__btn.active>span {
-  //transform: rotate(45deg);
+#menu-btn.active>span {
   background: transparent;
 }
 
-.menu__btn.active>span::before {
-  content: '';
-  position: absolute;
-  height: 3px;
+#menu-btn.active>span::before {
   top: 0;
-  transform: rotate(45deg);
-  background-color: $menu-button-color;
+  transform: translateX(-20px) rotate(45deg);
 }
 
-.menu__btn.active>span::after {
-  content: '';
-  position: absolute;
-  height: 3px;
+#menu-btn.active>span::after {
   top: 0;
-  transform: rotate(-45deg);
-  background-color: $menu-button-color;
+  transform: translateX(-20px) rotate(-45deg);
+}
+
+.menu__box {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4010;
+  line-height: 1rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: $menu-bg-color;
+  box-shadow: $menu-box-shadow;
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.25em 0.75em;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li{
+    display: inline-block;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  
+  &.show {
+    visibility: visible;
+    opacity: 1;
+    top:0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+  }
+  
+  &.fadeInSlideDown {
+    animation: fadeInSlideDown 0.5s forwards;
+  }
+
+  &.fadeInSlideUp {
+    animation: fadeInSlideUp 0.5s forwards;
+  }
+    
 }
 
 .menu__item {
   display: block;
-  padding: 12px 16px;
+  padding: 0.75em;
   font-family: $font-family-h2 ;
   font-style: italic;
   color: $menu-item-color;
   text-align: center;
   text-shadow: $menu-item-text-shadow;
-  font-size: 20px;
+  font-size: x-large;
   font-weight: 600;
   text-decoration: none;
   transition-duration: .25s;
   .social-svg{ 
     fill: $menu-item-color;
     padding: 2px 0 0 0;
+    transform: scale(1.5);
   }
 }
 
@@ -130,5 +136,47 @@
   left: auto;
   .social-svg{
     fill: $menu-item-highlight-color;
+  }
+}
+
+@media only screen and (min-width: $small-screen) {
+  /* Menu */
+
+  #menu-btn {
+    display: none;
+  }
+
+  .menu__box {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: 42px;
+    border-radius: 0;
+    
+    ul {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex: none;
+    }
+
+    li {
+      display: inline-block;
+      width: auto;
+      flex: none;
+    }
+  }
+
+  .menu__item {
+    font-size: medium;
+    padding: 0.5em 1em;
+    width: auto;
+    .social-svg{
+      transform: scale(1);
+    }
   }
 }
