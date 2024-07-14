@@ -42,6 +42,7 @@ contact_title: Contact
 contact_description: Feel free to contact me.
 
 # GITHUB-METADATA
+github: [metadata]
 repository: ozankiratli/ozankiratli.github.io
 projects:
   # sortby: pushed, stars 
