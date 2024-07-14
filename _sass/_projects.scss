@@ -9,6 +9,7 @@
 .project .name-link-wrapper {
   display: flex;
   justify-content: space-between;
+  font-size: medium;
 }
   
 .project .name-link-wrapper .links {
@@ -18,6 +19,7 @@
   
 .project-desc {
   line-height: 1.2rem;
+  font-size: medium;
 }
   
 .project-stars-forks {
@@ -27,6 +29,7 @@
   
 .tag-wrapper {
   margin: 1rem 0 0 0;
+  font-size: small;
 }
   
 .tag {
@@ -79,7 +82,7 @@
   
 .tag-wrapper {
   margin: 0.4rem 0 0 0;
-  font-size: small;
+  font-size: smaller;
 }
   
 .tag {

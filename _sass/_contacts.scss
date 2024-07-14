@@ -3,6 +3,7 @@
 .contact-icons {
   display: flex;
   justify-content: center;
+  font-size: medium;
 
   .social-link {
     position: relative;
@@ -59,4 +60,10 @@
       font-size: 2rem;
     }
   }
+}
+
+
+@media only screen and (min-width: $medium-screen) {
+
+
 }

@@ -47,6 +47,7 @@
   .flag {
     background: $bg-color;
     border-radius: 0.25rem;
+    font-size: medium;
     font-weight: $font-weight-strong;
     padding: 0.5rem 0.5rem;
     line-height: 2.3rem;
@@ -77,6 +78,7 @@
   }
 
   .time-wrapper {
+    font-size: medium;
     color: $text-color;
     display: block;
     line-height: 2.65em;
@@ -92,6 +94,7 @@
   }
 
   .desc {
+    font-size: medium;
     background: $bg-color;
     line-height: 1.2rem;
     border-radius: 0.25rem;
