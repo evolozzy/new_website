@@ -130,12 +130,12 @@
       }
 
       .flag-wrapper {
-        display: relative;
+        display: inline-block;
         text-align: right;
       }
 
       .time-wrapper {
-        float: bottom;
+        //float: bottom;
         margin-top: -0.1rem;
       }
 
@@ -161,7 +161,7 @@
       }
 
       .time-wrapper {
-        float: bottom;
+        //float: bottom;
         margin-top: -0.1rem;
       }
 

@@ -49,7 +49,7 @@ function fadeOutPreloader(element, duration) {
     if (opacity <= 0) {
       element.style.zIndex = 0;
       element.style.opacity = 0;
-      element.style.filter = 'alpha(opacity = 0)';
+      //element.style.filter = 'alpha(opacity = 0)';
 
       // Allow horizontal scroll
       document.documentElement.style.overflowY = 'auto';
@@ -61,7 +61,7 @@ function fadeOutPreloader(element, duration) {
     } else {
       opacity -= 0.1;
       element.style.opacity = opacity;
-      element.style.filter = 'alpha(opacity = ' + opacity * 100 + ')';
+      //element.style.filter = 'alpha(opacity = ' + opacity * 100 + ')';
     }
   }, duration);
 }
